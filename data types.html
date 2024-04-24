@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //primitive data types
+        var a = 1289721
+        document.write(typeof(a) + "<br>")
+
+        var b= "robert786"
+        document.write("<h1>" + typeof(b) + "</h1><br>")
+
+        var c = true
+        document.write(typeof(c) + "<br>")
+
+        var c1
+        document.write(typeof(c1) + "<br>")
+
+        var c2 = null
+        document.write(typeof(c2) + "<br>")
+
+        //non primitive data types
+        //array
+        a = [1,2,3,"Robert",true,false,null]
+        document.write(a + "<br>")
+
+        //accessing single value from array
+        document.write(a[3] + "<br>")
+
+        //changing values
+        a[0] = "Oral"
+        document.write(a + "<br>")
+
+        //object
+
+        b = {name:'Robert',age:27,city:'Mumbai'}
+        document.write(b['name'],'&nbsp &nbsp',b.age,"<br>")
+        b.age = 786
+        b.state = "MH"
+        document.write(b['name'],'&nbsp &nbsp',b.age,"<br>")
+
+        
+        d=[0,1,[{'data':['A1','A2','A3']}]]
+        document.write(d , "<br>")
+        document.write(d[2][0]['data'][1], "<br>")
+
+        e = [{'data':'xyz'}]
+        document.write(e,"<br>")
+        document.write(e[0]['data'],"<br>")
+
+        f = [{'data':['xyz']}]
+        document.write(f,"<br>")
+        document.write(typeof(f[0]['data'][0]),"<br>")
+
+        // g = {data1:'xyz',data2:{data3:[{'name':'itv','name:{age:[11,22]}'}]}}
+        // document.write(g,"<br>")
+        // document.write(g[0])
+
+        
+    </script>
+</body>
+</html>
