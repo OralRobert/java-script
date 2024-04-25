@@ -48,18 +48,19 @@
         document.write(d , "<br>")
         document.write(d[2][0]['data'][1], "<br>")
 
-        e = [{'data':'xyz'}]
+        e = [{'data':'xyz'
+    }]
         document.write(e,"<br>")
         document.write(e[0]['data'],"<br>")
 
         f = [{'data':['xyz']}]
         document.write(f,"<br>")
-        document.write(typeof(f[0]['data'][0]),"<br>")
+        document.write(f[0]['data'],"<br>")
 
-        // g = {data1:'xyz',data2:{data3:[{'name':'itv','name:{age:[11,22]}'}]}}
-        // document.write(g,"<br>")
-        // document.write(g[0])
-
+        g = {data1:'xyz',data2:{data3:[{'name':'itv','name2':{age:[11,22]}}]}}
+        document.write(g,"<br>")
+        document.write(g['data2']['data3'][0]['name2']['age'][1])
+        
         
     </script>
 </body>
