@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="r">
+    <H1 id="h">HELLO</H1>
+    <button onclick="greeting()">Click to change</button>
+    <script>
+        var i = 0
+    function greeting(){
+        bc = ['red','green','yellow','black']
+        tc = ['yellow','red','green','white']
+        text = ['GOOD MORNING','GOOD AFTERNOON','GOOD EVENING','GOOD NIGHT']
+      
+      data = document.getElementById('r');
+      data.style.backgroundColor = bc[i]
+      data.style.color = tc[i]
+      
+      document.getElementById('h').innerHTML = text[i]
+    
+
+      i++
+      if (i>= text.length){
+        i=0
+      }
+      
+    }
+</script>
+</body>
+</html>
