@@ -7,22 +7,29 @@
 </head>
 <body>
     <script>
-        /* parameterized function
-        function calculatearea(width,hieght){
-            var area = width*hieght
+         
+        function calculatearea(width = 0,hieght = 0,depth = 1){
+            var area = width*hieght*depth
             return area
         }
-        document.write(calculatearea(10,20)) */
+        document.write(calculatearea(10,20)) 
+
+
         /* Anonymous function
         var a = function(a,b){
             return a+b
         }
         document.write("addition is " + a(10,20))*/
         
-        /* Arrow function */
+        /* Arrow function 
         var k=(a,b)=>a+b
 
-        document.write(k(10,20))
+        document.write(k(10,20))*/
+
+        /*function xyz(){
+            return "Normal Function..."
+        }
+        document.write(xyz())*/
     </script>
 </body>
 </html>
