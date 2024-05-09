@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* print 1 to 10
+        function ab(n){
+            document.write(n)
+            n++
+            if(n<=10){
+                return ab(n)
+            }
+        }
+        ab(1)*/
+
+       /* 1 to infinite
+        
+       function ab(n){
+            document.write(n)
+            n++
+            return ab(n)
+        }
+        ab(1)*/
+
+        // tables from 1 to 10
+        function outer(i){
+            function inner(j){
+                document.write(i*j)
+                j++
+                if(j<=10){
+                    return inner(j)
+                }
+            }
+            inner(1)
+            i++
+            if(i<=10){
+                return outer(i)
+            }
+        }
+        outer(1)
+    </script>
+</body>
+</html>
