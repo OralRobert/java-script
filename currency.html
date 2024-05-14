@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: aquamarine;
+            width: 50%;
+            margin: 10% 20% 20% 30%;
+        }
+        .in{
+            margin-left: 50%;
+            margin-bottom: 20%;
+        }
+    </style>
+</head>
+<body style="background-color: chartreuse;">
+    
+    <form name="fom">
+        <h1>Currency converter</h1>
+        From : 
+        <select name="from" id="from">
+            <option>
+
+            </option>
+        </select>
+        To :
+        <select id="to" id="to">
+            <option>
+
+            </option>
+        </select>
+        
+        Amount : <input type="text" name="num" placeholder="enter amt">
+        
+    <h3>converted : <span id="h3"></span></h3>
+    </form>
+    <input type="submit" class="in" value="convert" onclick="convert()">
+    <script>
+        fetch(`https://api.exchangerate-api.com/v4/latest/INR`)
+        .then(re=>re.json())
+        .then(data=>{
+        d = data['rates']
+        for(i in d){
+        document.getElementById('from').innerHTML += `<option value="${i}">${i}</option>`
+        document.getElementById('to').innerHTML += `<option value="${i}">${i}</option>`
+      }
+        })
+
+        function convert(){
+            from = document.fom.from.value;
+            to = document.fom.to.value;
+            num = parseFloat(document.fom.num.value);
+            fetch(`https://api.exchangerate-api.com/v4/latest/${from}`)
+    .then(re=>re.json())
+    .then(data=>{
+      console.log(data['rates'][to])
+      camount = data['rates'][to]
+      document.getElementById('h3').innerHTML = camount*num;
+    })
+        }
+    </script>
+</body>
+</html>

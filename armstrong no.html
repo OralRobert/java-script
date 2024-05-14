@@ -6,18 +6,35 @@
     <title>Document</title>
 </head>
 <body>
+    <h1> Identify Armstrong no.</h1>
+    <form>
+        User : <input type="number" id="num" >
+        <input type="submit" name="sub" onclick="con()">
+    </form>
     <script>
-        n = 1634
+       function con(){
+        n = document.getElementById('num').value;
+        p = n.toString()
+        l = p.length
         n1 = n
         arm = 0
-       do{ rem = n % 10
-        arm = arm + (rem*rem*rem)
-        n = n/10}
-        while(n!=0);
-        document.write(arm)
-        if(n1==arm)
-        alert("yes it is Armstrong no.")
-    
+        while(n!=0){
+            rel = n%10
+            arm = arm+(rel**l)
+            n = Math.floor(n/10)
+            
+        }
+        if(n1==arm){
+            alert("Armstrong Number....")
+        }
+        else{
+            alert("Not A Armstrong...")
+        }
+    }
+        
+        
+
+       
     </script>
 </body>
 </html>
